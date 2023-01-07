@@ -1,5 +1,6 @@
 import  ExpenseItem  from './Components/ExpenseItem';
-
+import './Components/ExpenseDate.css';
+import Card from './Components/Card'
 
 function App() {
   const expenses = [
@@ -24,13 +25,13 @@ function App() {
     },
   ];
   return (
-    <div className="Expenses">
+    <Card className="expenses">
       <ExpenseItem time = {expenses[0].date} title={expenses[0].title} price={expenses[0].amount}/>
       <ExpenseItem time = {expenses[1].date} title={expenses[1].title} price={expenses[1].amount}/>
       <ExpenseItem time = {expenses[2].date} title={expenses[2].title} price={expenses[2].amount}/>
       <ExpenseItem time = {expenses[3].date} title={expenses[3].title} price={expenses[3].amount}/>
       
-    </div>
+    </Card>
   );
 }
 
